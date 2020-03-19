@@ -27,12 +27,13 @@ class EmojiArtViewController:
         }
     }
     @IBOutlet var scrollView: UIScrollView!
-    @IBOutlet var imageView: ImageView!
+    private var imageView = ImageView()
     
     private var backgroundImage: UIImage {
         set {
             let imageSize = newValue.size
             imageView.image = newValue
+            scrollView.addSubview(imageView)
             scrollView.contentSize = imageSize
             imageView.frame = CGRect(origin: .zero, size: imageSize)
         }

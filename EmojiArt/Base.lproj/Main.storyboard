@@ -58,22 +58,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uOu-aM-xRD">
                                 <rect key="frame" x="0.0" y="70" width="768" height="954"/>
                                 <subviews>
-                                    <scrollView verifyAmbiguity="off" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="infinite" translatesAutoresizingMaskIntoConstraints="NO" id="DYT-MJ-oZS">
+                                    <scrollView verifyAmbiguity="off" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="infinite" translatesAutoresizingMaskIntoConstraints="NO" id="DYT-MJ-oZS">
                                         <rect key="frame" x="0.0" y="0.0" width="768" height="954"/>
-                                        <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lza-Kt-NQ6" customClass="ImageView" customModule="EmojiArt" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="768" height="954"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                            </view>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstItem="lza-Kt-NQ6" firstAttribute="leading" secondItem="DYT-MJ-oZS" secondAttribute="leading" id="68P-be-crn"/>
-                                            <constraint firstItem="lza-Kt-NQ6" firstAttribute="top" secondItem="DYT-MJ-oZS" secondAttribute="top" id="TxX-jL-oXw"/>
-                                            <constraint firstItem="lza-Kt-NQ6" firstAttribute="centerX" secondItem="DYT-MJ-oZS" secondAttribute="centerX" id="Yid-QY-uZI"/>
-                                            <constraint firstAttribute="trailing" secondItem="lza-Kt-NQ6" secondAttribute="trailing" id="gbq-aM-ijl"/>
-                                            <constraint firstAttribute="bottom" secondItem="lza-Kt-NQ6" secondAttribute="bottom" id="ne9-DC-Ums"/>
-                                            <constraint firstItem="lza-Kt-NQ6" firstAttribute="bottom" secondItem="XdM-RJ-Adx" secondAttribute="bottom" id="vsd-7y-D7e"/>
-                                        </constraints>
                                         <viewLayoutGuide key="contentLayoutGuide" id="aiF-eS-3kz"/>
                                         <viewLayoutGuide key="frameLayoutGuide" id="XdM-RJ-Adx"/>
                                     </scrollView>
@@ -102,7 +88,6 @@
                     <connections>
                         <outlet property="dropZoneView" destination="uOu-aM-xRD" id="ZbA-CN-ae4"/>
                         <outlet property="emojiCollectionView" destination="bpu-iG-Tni" id="2ms-zO-Bh5"/>
-                        <outlet property="imageView" destination="lza-Kt-NQ6" id="6gQ-3u-W1C"/>
                         <outlet property="scrollView" destination="DYT-MJ-oZS" id="Fac-yq-EK7"/>
                     </connections>
                 </viewController>
