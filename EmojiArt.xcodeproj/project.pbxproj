@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B911B83D2446006F00B1D0D6 /* CGPoint++.swift in Sources */ = {isa = PBXBuildFile; fileRef = B911B83C2446006F00B1D0D6 /* CGPoint++.swift */; };
+		B911B83F244600B400B1D0D6 /* +EmojiViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B911B83E244600B400B1D0D6 /* +EmojiViewDelegate.swift */; };
+		B911B841244600FF00B1D0D6 /* EmojiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B911B840244600FF00B1D0D6 /* EmojiView.swift */; };
+		B911B8432446031700B1D0D6 /* Array+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B911B8422446031700B1D0D6 /* Array+.swift */; };
 		B934ADA32445A33300404F83 /* +UIDropInteractionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B934ADA22445A33300404F83 /* +UIDropInteractionDelegate.swift */; };
 		B934ADA52445A36400404F83 /* +UICollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B934ADA42445A36400404F83 /* +UICollectionViewDataSource.swift */; };
 		B934ADA72445A3AB00404F83 /* +UICollectionViewDropDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B934ADA62445A3AB00404F83 /* +UICollectionViewDropDelegate.swift */; };
@@ -24,6 +28,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B911B83C2446006F00B1D0D6 /* CGPoint++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint++.swift"; sourceTree = "<group>"; };
+		B911B83E244600B400B1D0D6 /* +EmojiViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+EmojiViewDelegate.swift"; sourceTree = "<group>"; };
+		B911B840244600FF00B1D0D6 /* EmojiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiView.swift; sourceTree = "<group>"; };
+		B911B8422446031700B1D0D6 /* Array+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+.swift"; sourceTree = "<group>"; };
 		B934ADA22445A33300404F83 /* +UIDropInteractionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+UIDropInteractionDelegate.swift"; sourceTree = "<group>"; };
 		B934ADA42445A36400404F83 /* +UICollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+UICollectionViewDataSource.swift"; sourceTree = "<group>"; };
 		B934ADA62445A3AB00404F83 /* +UICollectionViewDropDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+UICollectionViewDropDelegate.swift"; sourceTree = "<group>"; };
@@ -56,15 +64,17 @@
 		B934ADA024459E8C00404F83 /* components */ = {
 			isa = PBXGroup;
 			children = (
-				B96650DD241F690800F27A14 /* EmojiArtViewController.swift */,
 				B96650DF241F690800F27A14 /* Main.storyboard */,
-				B96650EE241F6E0900F27A14 /* EmojiCollectionViewCell.swift */,
 				B9B8E4A8241FA60100AAF3E7 /* ImageView.swift */,
+				B96650EE241F6E0900F27A14 /* EmojiCollectionViewCell.swift */,
+				B96650DD241F690800F27A14 /* EmojiArtViewController.swift */,
 				B934ADA22445A33300404F83 /* +UIDropInteractionDelegate.swift */,
 				B934ADA42445A36400404F83 /* +UICollectionViewDataSource.swift */,
 				B934ADA62445A3AB00404F83 /* +UICollectionViewDropDelegate.swift */,
 				B934ADA82445A47100404F83 /* +UICollectionViewDragDelegate.swift */,
 				B934ADAA2445A4E400404F83 /* +UICollectionViewFlowDelegateLayout.swift */,
+				B911B840244600FF00B1D0D6 /* EmojiView.swift */,
+				B911B83E244600B400B1D0D6 /* +EmojiViewDelegate.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -103,6 +113,8 @@
 				B96650DB241F690800F27A14 /* SceneDelegate.swift */,
 				B96650E4241F690B00F27A14 /* LaunchScreen.storyboard */,
 				B934ADAC2445A51D00404F83 /* URL+imageUrl.swift */,
+				B911B83C2446006F00B1D0D6 /* CGPoint++.swift */,
+				B911B8422446031700B1D0D6 /* Array+.swift */,
 			);
 			path = support;
 			sourceTree = "<group>";
@@ -178,15 +190,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B911B83D2446006F00B1D0D6 /* CGPoint++.swift in Sources */,
 				B9B8E4A9241FA60100AAF3E7 /* ImageView.swift in Sources */,
 				B934ADAB2445A4E400404F83 /* +UICollectionViewFlowDelegateLayout.swift in Sources */,
 				B96650DE241F690800F27A14 /* EmojiArtViewController.swift in Sources */,
+				B911B8432446031700B1D0D6 /* Array+.swift in Sources */,
 				B96650DA241F690800F27A14 /* AppDelegate.swift in Sources */,
 				B96650DC241F690800F27A14 /* SceneDelegate.swift in Sources */,
 				B934ADA92445A47100404F83 /* +UICollectionViewDragDelegate.swift in Sources */,
 				B934ADA32445A33300404F83 /* +UIDropInteractionDelegate.swift in Sources */,
 				B934ADA52445A36400404F83 /* +UICollectionViewDataSource.swift in Sources */,
+				B911B83F244600B400B1D0D6 /* +EmojiViewDelegate.swift in Sources */,
 				B934ADAD2445A51D00404F83 /* URL+imageUrl.swift in Sources */,
+				B911B841244600FF00B1D0D6 /* EmojiView.swift in Sources */,
 				B934ADA72445A3AB00404F83 /* +UICollectionViewDropDelegate.swift in Sources */,
 				B96650EF241F6E0900F27A14 /* EmojiCollectionViewCell.swift in Sources */,
 			);

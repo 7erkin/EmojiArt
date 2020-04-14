@@ -11,6 +11,7 @@ import UIKit
 class EmojiArtViewController:
     UIViewController, UICollectionViewDelegate {
     var emojies: [NSAttributedString] = ["😀", "😆", "😍", "😜", "🤩", "🎃", "😎", "🥂", "🥅", "⚽️", "🏉", "🏀"].map{ NSAttributedString(string: $0, attributes: [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .body).withSize(60)]) }
+    var droppedEmojies: [EmojiView] = []
     @IBOutlet var emojiCollectionView: UICollectionView! {
         didSet {
             self.emojiCollectionView.delegate = self
@@ -25,8 +26,19 @@ class EmojiArtViewController:
             self.dropZoneView.addInteraction(dropInteraction)
         }
     }
-    @IBOutlet var scrollView: UIScrollView!
-    private var imageView = ImageView()
+    @IBOutlet var scrollView: UIScrollView! {
+        didSet {
+            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(scrollViewTapped(_:)))
+            self.scrollView.addGestureRecognizer(tapGesture)
+        }
+    }
+    
+    @objc
+    private func scrollViewTapped(_ gesture: UITapGestureRecognizer) {
+        playDownEmojieViews(except: nil)
+    }
+    
+    var imageView = ImageView()
     
     var backgroundImage: UIImage {
         set {

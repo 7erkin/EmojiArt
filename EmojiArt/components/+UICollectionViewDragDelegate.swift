@@ -13,6 +13,7 @@ extension EmojiArtViewController: UICollectionViewDragDelegate {
     func collectionView(_ collectionView: UICollectionView, itemsForBeginning session: UIDragSession, at indexPath: IndexPath) -> [UIDragItem] {
         let itemProvider = NSItemProvider(object: emojies[indexPath.row])
         let dragItem = UIDragItem(itemProvider: itemProvider)
+        session.localContext = self
         return [dragItem]
     }
 }
