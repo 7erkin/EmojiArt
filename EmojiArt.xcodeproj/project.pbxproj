@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B934ADA32445A33300404F83 /* +UIDropInteractionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B934ADA22445A33300404F83 /* +UIDropInteractionDelegate.swift */; };
+		B934ADA52445A36400404F83 /* +UICollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B934ADA42445A36400404F83 /* +UICollectionViewDataSource.swift */; };
+		B934ADA72445A3AB00404F83 /* +UICollectionViewDropDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B934ADA62445A3AB00404F83 /* +UICollectionViewDropDelegate.swift */; };
+		B934ADA92445A47100404F83 /* +UICollectionViewDragDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B934ADA82445A47100404F83 /* +UICollectionViewDragDelegate.swift */; };
+		B934ADAB2445A4E400404F83 /* +UICollectionViewFlowDelegateLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B934ADAA2445A4E400404F83 /* +UICollectionViewFlowDelegateLayout.swift */; };
+		B934ADAD2445A51D00404F83 /* URL+imageUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B934ADAC2445A51D00404F83 /* URL+imageUrl.swift */; };
 		B96650DA241F690800F27A14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96650D9241F690800F27A14 /* AppDelegate.swift */; };
 		B96650DC241F690800F27A14 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96650DB241F690800F27A14 /* SceneDelegate.swift */; };
 		B96650DE241F690800F27A14 /* EmojiArtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96650DD241F690800F27A14 /* EmojiArtViewController.swift */; };
@@ -18,6 +24,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B934ADA22445A33300404F83 /* +UIDropInteractionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+UIDropInteractionDelegate.swift"; sourceTree = "<group>"; };
+		B934ADA42445A36400404F83 /* +UICollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+UICollectionViewDataSource.swift"; sourceTree = "<group>"; };
+		B934ADA62445A3AB00404F83 /* +UICollectionViewDropDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+UICollectionViewDropDelegate.swift"; sourceTree = "<group>"; };
+		B934ADA82445A47100404F83 /* +UICollectionViewDragDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+UICollectionViewDragDelegate.swift"; sourceTree = "<group>"; };
+		B934ADAA2445A4E400404F83 /* +UICollectionViewFlowDelegateLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+UICollectionViewFlowDelegateLayout.swift"; sourceTree = "<group>"; };
+		B934ADAC2445A51D00404F83 /* URL+imageUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+imageUrl.swift"; sourceTree = "<group>"; };
 		B96650D6241F690800F27A14 /* EmojiArt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmojiArt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B96650D9241F690800F27A14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B96650DB241F690800F27A14 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +53,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B934ADA024459E8C00404F83 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				B96650DD241F690800F27A14 /* EmojiArtViewController.swift */,
+				B96650DF241F690800F27A14 /* Main.storyboard */,
+				B96650EE241F6E0900F27A14 /* EmojiCollectionViewCell.swift */,
+				B9B8E4A8241FA60100AAF3E7 /* ImageView.swift */,
+				B934ADA22445A33300404F83 /* +UIDropInteractionDelegate.swift */,
+				B934ADA42445A36400404F83 /* +UICollectionViewDataSource.swift */,
+				B934ADA62445A3AB00404F83 /* +UICollectionViewDropDelegate.swift */,
+				B934ADA82445A47100404F83 /* +UICollectionViewDragDelegate.swift */,
+				B934ADAA2445A4E400404F83 /* +UICollectionViewFlowDelegateLayout.swift */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
 		B96650CD241F690800F27A14 = {
 			isa = PBXGroup;
 			children = (
@@ -60,13 +88,9 @@
 		B96650D8241F690800F27A14 /* EmojiArt */ = {
 			isa = PBXGroup;
 			children = (
+				B934ADA024459E8C00404F83 /* components */,
 				B96650ED241F693000F27A14 /* support */,
-				B96650DD241F690800F27A14 /* EmojiArtViewController.swift */,
-				B96650DF241F690800F27A14 /* Main.storyboard */,
-				B96650E2241F690B00F27A14 /* Assets.xcassets */,
 				B96650E7241F690B00F27A14 /* Info.plist */,
-				B96650EE241F6E0900F27A14 /* EmojiCollectionViewCell.swift */,
-				B9B8E4A8241FA60100AAF3E7 /* ImageView.swift */,
 			);
 			path = EmojiArt;
 			sourceTree = "<group>";
@@ -74,9 +98,11 @@
 		B96650ED241F693000F27A14 /* support */ = {
 			isa = PBXGroup;
 			children = (
+				B96650E2241F690B00F27A14 /* Assets.xcassets */,
 				B96650D9241F690800F27A14 /* AppDelegate.swift */,
 				B96650DB241F690800F27A14 /* SceneDelegate.swift */,
 				B96650E4241F690B00F27A14 /* LaunchScreen.storyboard */,
+				B934ADAC2445A51D00404F83 /* URL+imageUrl.swift */,
 			);
 			path = support;
 			sourceTree = "<group>";
@@ -153,9 +179,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9B8E4A9241FA60100AAF3E7 /* ImageView.swift in Sources */,
+				B934ADAB2445A4E400404F83 /* +UICollectionViewFlowDelegateLayout.swift in Sources */,
 				B96650DE241F690800F27A14 /* EmojiArtViewController.swift in Sources */,
 				B96650DA241F690800F27A14 /* AppDelegate.swift in Sources */,
 				B96650DC241F690800F27A14 /* SceneDelegate.swift in Sources */,
+				B934ADA92445A47100404F83 /* +UICollectionViewDragDelegate.swift in Sources */,
+				B934ADA32445A33300404F83 /* +UIDropInteractionDelegate.swift in Sources */,
+				B934ADA52445A36400404F83 /* +UICollectionViewDataSource.swift in Sources */,
+				B934ADAD2445A51D00404F83 /* URL+imageUrl.swift in Sources */,
+				B934ADA72445A3AB00404F83 /* +UICollectionViewDropDelegate.swift in Sources */,
 				B96650EF241F6E0900F27A14 /* EmojiCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
