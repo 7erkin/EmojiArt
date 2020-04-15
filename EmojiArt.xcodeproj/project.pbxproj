@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C0FEFC9244781BE005F2B01 /* EmojiArtTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0FEFC8244781BE005F2B01 /* EmojiArtTableViewController.swift */; };
+		7C0FEFCB2447988C005F2B01 /* EmojiesInputCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0FEFCA2447988C005F2B01 /* EmojiesInputCollectionViewCell.swift */; };
+		7C0FEFCD2447AF67005F2B01 /* +EmojiesAdding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0FEFCC2447AF67005F2B01 /* +EmojiesAdding.swift */; };
 		B911B83D2446006F00B1D0D6 /* CGPoint++.swift in Sources */ = {isa = PBXBuildFile; fileRef = B911B83C2446006F00B1D0D6 /* CGPoint++.swift */; };
 		B911B83F244600B400B1D0D6 /* +EmojiViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B911B83E244600B400B1D0D6 /* +EmojiViewDelegate.swift */; };
 		B911B841244600FF00B1D0D6 /* EmojiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B911B840244600FF00B1D0D6 /* EmojiView.swift */; };
@@ -28,6 +31,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7C0FEFC8244781BE005F2B01 /* EmojiArtTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiArtTableViewController.swift; sourceTree = "<group>"; };
+		7C0FEFCA2447988C005F2B01 /* EmojiesInputCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiesInputCollectionViewCell.swift; sourceTree = "<group>"; };
+		7C0FEFCC2447AF67005F2B01 /* +EmojiesAdding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+EmojiesAdding.swift"; sourceTree = "<group>"; };
 		B911B83C2446006F00B1D0D6 /* CGPoint++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint++.swift"; sourceTree = "<group>"; };
 		B911B83E244600B400B1D0D6 /* +EmojiViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+EmojiViewDelegate.swift"; sourceTree = "<group>"; };
 		B911B840244600FF00B1D0D6 /* EmojiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiView.swift; sourceTree = "<group>"; };
@@ -65,8 +71,10 @@
 			isa = PBXGroup;
 			children = (
 				B96650DF241F690800F27A14 /* Main.storyboard */,
+				7C0FEFC8244781BE005F2B01 /* EmojiArtTableViewController.swift */,
 				B9B8E4A8241FA60100AAF3E7 /* ImageView.swift */,
 				B96650EE241F6E0900F27A14 /* EmojiCollectionViewCell.swift */,
+				7C0FEFCA2447988C005F2B01 /* EmojiesInputCollectionViewCell.swift */,
 				B96650DD241F690800F27A14 /* EmojiArtViewController.swift */,
 				B934ADA22445A33300404F83 /* +UIDropInteractionDelegate.swift */,
 				B934ADA42445A36400404F83 /* +UICollectionViewDataSource.swift */,
@@ -75,6 +83,7 @@
 				B934ADAA2445A4E400404F83 /* +UICollectionViewFlowDelegateLayout.swift */,
 				B911B840244600FF00B1D0D6 /* EmojiView.swift */,
 				B911B83E244600B400B1D0D6 /* +EmojiViewDelegate.swift */,
+				7C0FEFCC2447AF67005F2B01 /* +EmojiesAdding.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -190,6 +199,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C0FEFCB2447988C005F2B01 /* EmojiesInputCollectionViewCell.swift in Sources */,
 				B911B83D2446006F00B1D0D6 /* CGPoint++.swift in Sources */,
 				B9B8E4A9241FA60100AAF3E7 /* ImageView.swift in Sources */,
 				B934ADAB2445A4E400404F83 /* +UICollectionViewFlowDelegateLayout.swift in Sources */,
@@ -202,9 +212,11 @@
 				B934ADA52445A36400404F83 /* +UICollectionViewDataSource.swift in Sources */,
 				B911B83F244600B400B1D0D6 /* +EmojiViewDelegate.swift in Sources */,
 				B934ADAD2445A51D00404F83 /* URL+imageUrl.swift in Sources */,
+				7C0FEFC9244781BE005F2B01 /* EmojiArtTableViewController.swift in Sources */,
 				B911B841244600FF00B1D0D6 /* EmojiView.swift in Sources */,
 				B934ADA72445A3AB00404F83 /* +UICollectionViewDropDelegate.swift in Sources */,
 				B96650EF241F6E0900F27A14 /* EmojiCollectionViewCell.swift in Sources */,
+				7C0FEFCD2447AF67005F2B01 /* +EmojiesAdding.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

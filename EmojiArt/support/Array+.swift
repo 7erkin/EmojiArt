@@ -7,11 +7,24 @@
 //
 
 import Foundation
+import UIKit
 
 extension Array {
     func forEachWhere(predicate: (Element) -> Bool, _ body: (Element) throws -> Void) rethrows {
         for el in self where predicate(el) {
             try body(el)
         }
+    }
+}
+
+extension Array where Element == NSAttributedString {
+    func differenceWith(_ array: [NSAttributedString]) -> [NSAttributedString] {
+        return self.filter { !array.contains($0) }
+    }
+}
+
+extension Array where Element == String {
+    var attributedString: [NSAttributedString] {
+        return self.map { NSAttributedString(string: $0, attributes: [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .body).withSize(60)]) }
     }
 }

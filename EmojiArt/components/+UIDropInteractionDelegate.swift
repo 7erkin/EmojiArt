@@ -20,16 +20,16 @@ extension EmojiArtViewController {
     func playDownEmojieViews(except: ((EmojiView) -> Bool)?) {
         let playDownEmojieView: (EmojiView) -> Void = { $0.isHighlighted = false }
         if except == nil {
-            droppedEmojies.forEach(playDownEmojieView)
+            emojiViewsOnArt.forEach(playDownEmojieView)
         } else {
-            droppedEmojies.forEachWhere(predicate: { except!($0) }, playDownEmojieView)
+            emojiViewsOnArt.forEachWhere(predicate: { except!($0) }, playDownEmojieView)
         }
     }
 }
 
 extension EmojiArtViewController: UIDropInteractionDelegate {
     func dropInteraction(_ interaction: UIDropInteraction, performDrop session: UIDropSession) {
-        if let _ = session.localDragSession?.localContext as? EmojiArtViewController {
+        if isLocal(session: session) {
             let dropPoint = session.location(in: dropZoneView)
             _ = session.loadObjects(ofClass: NSAttributedString.self) { provider in
                 if let symbol = provider.first as? NSAttributedString {
@@ -37,11 +37,12 @@ extension EmojiArtViewController: UIDropInteractionDelegate {
                         guard let self = self else { return }
                         let emojiView = self.createEmojiView(with: symbol)
                         self.imageView.addSubview(emojiView)
-                        self.droppedEmojies.append(emojiView)
+                        self.emojiViewsOnArt.append(emojiView)
                         emojiView.frame.origin = dropPoint
                     }
                 }
             }
+            return
         }
         
         _ = session.loadObjects(ofClass: URL.self) { provider in
@@ -57,11 +58,21 @@ extension EmojiArtViewController: UIDropInteractionDelegate {
         }
     }
     
+    func isLocal(session: UIDropSession) -> Bool {
+        return session.localDragSession?.localContext is EmojiArtViewController
+    }
+    
     func dropInteraction(_ interaction: UIDropInteraction, sessionDidUpdate session: UIDropSession) -> UIDropProposal {
         return UIDropProposal(operation: .copy)
     }
     
     func dropInteraction(_ interaction: UIDropInteraction, canHandle session: UIDropSession) -> Bool {
-        return session.canLoadObjects(ofClass: URL.self) || session.canLoadObjects(ofClass: NSAttributedString.self)
+        if isLocal(session: session) {
+            if imageView.image == nil {
+                return false
+            }
+            return session.canLoadObjects(ofClass: NSAttributedString.self)
+        }
+        return session.canLoadObjects(ofClass: URL.self)
     }
 }

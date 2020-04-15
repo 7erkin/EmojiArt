@@ -11,6 +11,10 @@ import UIKit
 
 extension EmojiArtViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.bounds.height, height: collectionView.bounds.height)
+        let itemSide = collectionView.bounds.height
+        if indexPath.section == 0 && collectionView.cellForItem(at: indexPath) is EmojiesInputCollectionViewCell {
+            return CGSize(width: 7 * itemSide, height: itemSide)
+        }
+        return CGSize(width: itemSide, height: itemSide)
     }
 }

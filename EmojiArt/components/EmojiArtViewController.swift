@@ -10,8 +10,8 @@ import UIKit
 
 class EmojiArtViewController:
     UIViewController, UICollectionViewDelegate {
-    var emojies: [NSAttributedString] = ["😀", "😆", "😍", "😜", "🤩", "🎃", "😎", "🥂", "🥅", "⚽️", "🏉", "🏀"].map{ NSAttributedString(string: $0, attributes: [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .body).withSize(60)]) }
-    var droppedEmojies: [EmojiView] = []
+    var emojies: [NSAttributedString] = ["😀", "😆", "😍", "😜", "🤩", "🎃", "😎", "🥂", "🥅", "⚽️", "🏉", "🏀"].attributedString
+    var emojiViewsOnArt: [EmojiView] = []
     @IBOutlet var emojiCollectionView: UICollectionView! {
         didSet {
             self.emojiCollectionView.delegate = self
@@ -50,6 +50,22 @@ class EmojiArtViewController:
         }
         get {
             self.imageView.image
+        }
+    }
+    
+    @IBAction func onAddEmojiesTapped(_ sender: Any) {
+        isEmojiAddingModeOn = true
+    }
+    
+    var isEmojiAddingModeOn = false {
+        didSet {
+            self.emojiCollectionView.reloadItems(at: [.init(item: 0, section: 0)])
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if let cell = cell as? EmojiesInputCollectionViewCell {
+            cell.textField.becomeFirstResponder()
         }
     }
 }
